@@ -63,11 +63,18 @@
 				<fixed>
 				  
 					<item type="label">
-						<pos anchor="se" x="93%" y="60%"/>
-						<normal alpha="0.5" font="Sans 10" color="#000000"/>
+						<pos anchor="se" x="62%" y="62%"/>
+						<normal alpha="0.5" font="Sans 10" color="#1e1e1e"/>
 						<text>%c</text>
-					</item>			
-
+					</item>
+                    
+                    <!-- hostname -->
+                    <item type="label" id="hostname">
+                        <pos anchor="w" x="68%" y="43%"/>
+                        <normal font="Sans  12 bold" alpha="0.5" color="#1e1e1e"/>
+                        <text>@%h</text>
+                    </item>
+                    
 					<item type="pixmap" id="session_button" button="true">
 						<normal file="system.png"/>
 						 <prelight file="system_hover.png"/>
@@ -80,7 +87,6 @@
                         <prelight file="system_power_hover.png"/>
 						<pos anchor="w" x="40" y="40%"/>
 					</item>
-
 				</fixed>
 		
 			</item>
@@ -102,6 +108,7 @@
 		
 	</item>
 
+
 	<item type="rect" id="pam-error-paceholder">
 	<pos anchor="c" x="50%" y="98%" width="530" height="200"/>
 
@@ -109,7 +116,9 @@
 			<normal alpha="0" color="#1e1e1e" font="Sans Bold 10"/>
 			<!-- </text> -->
 		</item>
-		
+        
+
+            
 		<item type="label" id="pam-error">
 			<pos anchor="c" x="50%" y="50%" expand="true"/>
 			<normal alpha="0" color="#1e1e1e" font="Sans Bold 10"/>
