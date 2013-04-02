@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+
+<greeter id="theme">
+	<style font="Sans 13" window-text-color="#bfd9ff"
+	       base-color="#bfd9ff" alternate-base-color="#666666"
+	       text-color="#000000" disabled-text-color="#333333"
+	       base-alpha="0" 
+	       disabled-base-color="#ff0000"
+	       disabled-base-alpha="0.20" 
+	       disabled-highlight-alpha="0"
+	       frame="false" />
+	       
+	<item type="pixmap" id="background" background="true">
+		<normal file="background.png" scalemode="crop"/>
+		<pos width="100%" height="100%"/>
+	</item>
+
+    <item type="label">
+        <pos anchor="se" x="30%" y="99%"/>
+        <normal alpha="0.1" font="Sans 100" color="c76290"/>
+        <text>%c</text>
+    </item>	
+    /*#1e1e1e*/
+    <!-- hostname -->
+    <item type="label" id="hostname">
+        <pos anchor="w" x="10%" y="80%"/>
+        <normal font="Sans  30 bold" alpha="0.2" color="c76290"/>
+        <text>@ %h</text>
+    </item>	
+    
+	<item type="pixmap" id="system-session">
+		<normal file="frame.png"/>
+		<pos anchor="c" x="50%" y="50%" width="500" height="200"/>
+		<box orientation="vertical" spacing="10" homogeneous="true">
+		
+			<item type="pixmap">
+				<normal file="logo.png"/>
+				<pos anchor="c" x="50%" y="120%"  width="120" height="300"/>
+			</item>               
+
+			<item type="rect" id="user-field">
+				<pos anchor="c" x="50%" y="62%" width="324" height="41"/>
+				<box orientation="vertical" spacing="0" homogeneous="true">
+				
+					<item type="pixmap" button="true">
+						<normal file="user_normal.png"/>
+						<prelight file="user_hover.png"/>
+						<active file="user_hover.png"/>
+						<pos anchor="c" x="50%" y="39%"/>
+					</item>
+					
+					<item type="entry" id="user-entry">
+						<pos anchor="c" x="54%" y="-75%" width="164" height="26"/>
+					</item>
+
+					<item type="pixmap" button="true">
+						<normal file="password_normal.png"/>
+						<prelight file="password_hover.png"/>
+						<pos anchor="c" x="50%" y="355%"/>
+					</item>
+									
+					<item type="entry" id="pw-entry">
+						<pos anchor="c" x="54%" y="235%" width="164" height="26"/>
+					</item>		
+				</box>
+			</item>
+            <item type="pixmap" id="login_button" button="true">
+                <normal file="login_normal.png"/>
+                <prelight file="login_active.png"/>
+                <active file="login_pressed.png"/>
+                <pos anchor="c" x="50%" y="96%"/>
+            </item> 			
+			<item type="rect" id="system-session">
+			<pos anchor="c" x="50%" y="70%" width="530" height="44"/>
+				<fixed>
+                    
+                    
+					<item type="pixmap" id="session_button" button="true">
+						<normal file="system.png"/>
+						 <prelight file="system_hover.png"/>
+						<active file="system_hover.png"/>
+						<pos anchor="w" x="70" y="35%"/>
+					</item>
+
+					<item type="pixmap" id="system_button" button="true">
+						<normal file="system_power.png"/>
+                        <prelight file="system_power_hover.png"/>
+						<pos anchor="w" x="40" y="35%"/>
+					</item>
+				</fixed>
+		
+			</item>
+		</box>
+	</item>   
+	<item type="pixmap" id="caps-lock-warning">
+	<normal file="capslock.png"/>
+	<pos anchor="c" x="50%" y="45%"/>
+	
+		<fixed>
+		
+			<item type="label" id="mesage">
+			<normal color="#1e1e1e" font="Sans Bold 10"/>
+			<pos anchor="c" x="50%" y="92%"/>
+			<stock type="caps-lock-warning"/>
+			</item>
+									
+		</fixed>
+		
+	</item>
+
+
+	<item type="rect" id="pam-error-paceholder">
+	<pos anchor="c" x="50%" y="98%" width="530" height="200"/>
+
+		<item type="label" id="dummy1">
+			<normal alpha="0" color="#1e1e1e" font="Sans Bold 10"/>
+			<!-- </text> -->
+		</item>
+        
+
+            
+		<item type="label" id="pam-error">
+			<pos anchor="c" x="50%" y="50%" expand="true"/>
+			<normal alpha="0" color="#1e1e1e" font="Sans Bold 10"/>
+			<!-- </text> -->
+		</item>
+
+	</item>
+
+</greeter>
