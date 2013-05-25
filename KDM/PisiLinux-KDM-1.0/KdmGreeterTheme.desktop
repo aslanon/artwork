@@ -1,0 +1,7 @@
+[KdmGreeterTheme]
+Greeter=pisilinux-kdm.xml
+Name=Pisi Linux - KDM
+Author=Onur Aslan <aslanon> <slnnronur@gmail.com>
+Description=PisiLinux-KDM for Pisi Linux 1.0
+Copyright=CreativeCommons-BY-NC-SA
+Screenshot=screenshot.jpeg
